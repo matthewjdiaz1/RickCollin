@@ -1,8 +1,6 @@
 import React from 'react';
-import Header from './Header';
-import IceacreamCarousel from './IcecreamCarousel';
 
-class App extends React.Component {
+class LearnMore extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -15,11 +13,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Header />
-        <IceacreamCarousel />
+        LearnMore
       </div>
     )
   }
 }
 
-export default App;
+export default LearnMore;
