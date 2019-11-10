@@ -1,20 +1,26 @@
+html,body,#app{
+  height:100%;
+  margin:0;
+  padding:0
+}
 .app-container {
   background-color: rgb(241,168,182);
-  /* display: flex; */
-  /* flex-direction: column; */
+  border: 5px solid rgb(241,135,149);
   font-family: 'Mukta', sans-serif;
-  /* top: 125px; */
+  height: calc(100% - 10px);
 }
 /* header */
 .header-container {
   display: flex;
   flex-direction: row;
+  height: 75px;
 }
 .header-container-left {
   display: flex;
   flex-direction: row;
+  height: 75px;
   width: 100%;
-  padding: 0px 15px 0px 15px;
+  /* padding: 0px 15px 0px 15px; */
   font-size: 18px;
   font-weight: bolder;
   color: white;
@@ -24,15 +30,16 @@
   flex-direction: right;
   color: white;
   font-weight: bolder;
+  height: 75px;
   width: 100%;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 45px 0px 0px;
   font-size: 18px;
   flex-direction: row-reverse;
 }
 .header-logo {
   width: 175px;
-  height: 85px;
-  line-height: 85px;
+  height: 75px;
+  line-height: 75px;
   font-weight: bolder;
   text-align: center;
   text-transform: uppercase;
@@ -43,8 +50,8 @@
 }
 .header-button {
   width: 115px;
-  height: 85px;
-  line-height: 85px;
+  height: 75px;
+  line-height: 75px;
   font-weight: bolder;
   text-align: center;
   text-transform: uppercase;
@@ -53,10 +60,10 @@
   cursor: pointer;
   background-color: rgb(241,135,149);
 }
-.header-button-shopnow {
-  width: 130px;
-  height: 40px;
-  line-height: 40px;
+.header-shopnow-button {
+  width: 125px;
+  height: 30px;
+  line-height: 30px;
   border-radius: 25px;
   border: 3px solid white;
   margin: 20px 0px 20px 0px;
@@ -67,18 +74,24 @@
   background-color: white;
   color: rgb(241,168,182);
 }
-.header-button-shopnow:hover {
+.header-shopnow-button:hover {
   cursor: pointer;
   color: rgb(241,135,149);
   font-size: 22px;
 }
 /* carousel */
+.IcecreamCarousel {
+  display: flex;
+  height: calc(100% - 225px);
+  width: calc(100% - 250px);
+  padding: 75px 125px 75px 125px;
+}
 .icecream-info-container {
   display: flex;
   flex-direction: column;
-  height: 650px;
+  height: 100%;
   width: 650px;
-  padding: 75px 0px 0px 125px;
+  /* padding: 75px 0px 75px 125px; */
   color: white;
   background-color: rgb(241,168,182);
 }
