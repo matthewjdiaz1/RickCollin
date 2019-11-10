@@ -13,7 +13,6 @@ class IceacreamImage extends React.Component {
   render() {
     return (
       <div>
-        IceacreamImage
       </div>
     )
   }
