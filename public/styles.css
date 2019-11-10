@@ -1,0 +1,54 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(241,168,182);
+}
+.header-container {
+  display: flex;
+  flex-direction: row;
+}
+.header-container-left {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+  font-size: 18px;
+}
+.header-container-right {
+  display: flex;
+  flex-direction: right;
+  color: white;
+  width: 100%;
+  padding: 0px 15px 0px 15px;
+  font-size: 18px;
+  flex-direction: row-reverse;
+}
+.header-logo {
+  width: 175px;
+  height: 85px;
+  line-height: 85px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-button {
+  width: 115px;
+  height: 85px;
+  line-height: 85px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.header-button-shopnow {
+  width: 175px;
+  height: 85px;
+  line-height: 85px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+/* carousel */
+
+.IcecreamCarousel {
+  display: flex;
+}
