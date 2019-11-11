@@ -1,13 +1,18 @@
 import React from 'react';
+import HeaderButton from './HeaderButton.jsx';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      flavor: null,
     }
+    this.toggleHover = this.toggleHover.bind(this);
   }
   componentDidMount() {
+
+  }
+  toggleHover() {
 
   }
   render() {
@@ -15,14 +20,14 @@ class Header extends React.Component {
       <div className="header-container">
         <div className="header-container-left">
           <div className="header-logo">Logo</div>
-          <div className="header-button">Product</div>
-          <div className="header-button">Shops</div>
-          <div className="header-button">About Us</div>
-          <div className="header-button">Locator</div>
-          <div className="header-button">Recipes</div>
+          <HeaderButton text={'Product'} hoverColor={this.props.flavor.secondaryColor} />
+          <HeaderButton text={'Shops'} hoverColor={this.props.flavor.secondaryColor} />
+          <HeaderButton text={'About Us'} hoverColor={this.props.flavor.secondaryColor} />
+          <HeaderButton text={'Locator'} hoverColor={this.props.flavor.secondaryColor} />
+          <HeaderButton text={'Recipes'} hoverColor={this.props.flavor.secondaryColor} />
         </div>
         <div className="header-container-right">
-          <div className="header-button-shopnow">Shop Now
+          <div className="header-shopnow-button">Shop Now
         </div>
         </div>
       </div>
