@@ -8,24 +8,8 @@ class HeaderButton extends React.Component {
   }
   componentDidMount() {
     this.setState({
-      style: {
-        backgroundColor: '',
-      }
+      style: { backgroundColor: '' }
     });
-    // if (!this.props.textColor) {
-    //   this.setState({
-    //     style: {
-    //       backgroundColor: this.props.primaryColor,
-    //     },
-    //   });
-    // } else {
-    //   this.setState({
-    //     style: {
-    //       backgroundColor: this.props.primaryColor,
-    //       color: this.props.textColor,
-    //     },
-    //   });
-    // }
   }
   toggleHover() {
     if (this.state.style.backgroundColor === '') {
@@ -41,7 +25,6 @@ class HeaderButton extends React.Component {
         },
       });
     }
-    console.log(this.props.hoverColor);
   }
   render() {
     return (
@@ -52,8 +35,8 @@ class HeaderButton extends React.Component {
       >
         {this.props.text}
       </div>
-    )
+    );
   }
-}
+};
 
 export default HeaderButton;

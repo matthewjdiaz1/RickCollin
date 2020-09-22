@@ -15,6 +15,7 @@ class IceacreamInfo extends React.Component {
         <LearnMore
           toggleLearnMoreModal={this.props.toggleLearnMoreModal}
           hoverColor={this.props.flavor.secondaryColor}
+          primaryColor={this.props.flavor.primaryColor}
         />
       </div>
     )

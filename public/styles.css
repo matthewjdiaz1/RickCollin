@@ -90,12 +90,10 @@ html,body,#app{
   text-align: center;
   text-transform: uppercase;
   background-color: white;
-  /* color: rgb(241,168,182); */
   z-index: 2;
 }
 .header-shopnow-button:hover {
   cursor: pointer;
-  /* color: rgb(241,135,149); */
   font-size: 22px;
 }
 /* carousel info                          carousel info     */
@@ -171,21 +169,22 @@ html,body,#app{
   padding: 0px 50px 0px 0px;
 }
 .icecream-learn-more {
-  width: 130px;
+  width: 170px;
   height: 40px;
-  line-height: 40px;
+  /* line-height: 30px; */
   border-radius: 25px;
   border: 3px solid white;
   margin: 20px 0px 20px 0px;
   font-size: 20px;
   font-weight: bolder;
-  text-align: center;
+  text-align: top;
+  align-items: center;
   text-transform: uppercase;
   color: white;
 }
 .icecream-learn-more:hover {
   cursor: pointer;
-  /* background-color: rgb(241,135,149); */
+  font-size: 22px;
 }
 /* carousel image */
 .IcecreamImage {

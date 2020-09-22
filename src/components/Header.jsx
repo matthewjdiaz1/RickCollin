@@ -15,7 +15,8 @@ class Header extends React.Component {
     return (
       <div className="header-container">
         <div className="header-container-left">
-          <div className="header-logo">Logo..</div>
+          {/* <div className="header-logo">home</div> */}
+          <HeaderButton text={'home'} hoverColor={this.props.secondaryColor} />
           <HeaderButton text={'Product'} hoverColor={this.props.secondaryColor} />
           <HeaderButton text={'Shops'} hoverColor={this.props.secondaryColor} />
           <HeaderButton text={'About Us'} hoverColor={this.props.secondaryColor} />
