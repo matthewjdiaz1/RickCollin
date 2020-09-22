@@ -1,5 +1,5 @@
 const data = {
-  "flavors": [
+  flavors: [
     {
       name: `Raspberry Sorbet`,
       info: `We blended delicious, ripe raspberries into a

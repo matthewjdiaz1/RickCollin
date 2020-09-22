@@ -3,31 +3,56 @@ import React from 'react';
 class HeaderButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      hover: false,
-    }
+    this.state = {};
     this.toggleHover = this.toggleHover.bind(this);
   }
   componentDidMount() {
-
+    this.setState({
+      style: {
+        backgroundColor: '',
+      }
+    });
+    // if (!this.props.textColor) {
+    //   this.setState({
+    //     style: {
+    //       backgroundColor: this.props.primaryColor,
+    //     },
+    //   });
+    // } else {
+    //   this.setState({
+    //     style: {
+    //       backgroundColor: this.props.primaryColor,
+    //       color: this.props.textColor,
+    //     },
+    //   });
+    // }
   }
   toggleHover() {
-    this.setState({ hover: !this.state.hover })
+    if (this.state.style.backgroundColor === '') {
+      this.setState({
+        style: {
+          backgroundColor: this.props.hoverColor,
+        },
+      });
+    } else {
+      this.setState({
+        style: {
+          backgroundColor: '',
+        },
+      });
+    }
+    console.log(this.props.hoverColor);
   }
   render() {
-    if (this.state.hover) {
-      return (
-        <div className="header-button" style={{ backgroundColor: this.props.hoverColor }} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-          {this.props.text}
-        </div>
-      )
-    } else {
-      return (
-        <div className="header-button" style={{ backgroundColor: '' }} onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover}>
-          {this.props.text}
-        </div>
-      )
-    }
+    return (
+      <div className="header-button"
+        style={this.state.style}
+        onMouseEnter={this.toggleHover}
+        onMouseLeave={this.toggleHover}
+      >
+        {this.props.text}
+      </div>
+    )
   }
 }
 

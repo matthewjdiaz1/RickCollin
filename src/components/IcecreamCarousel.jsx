@@ -2,8 +2,6 @@ import React from 'react';
 import IcecreamInfo from './IcecreamInfo.jsx';
 import IcecreamImage from './IcecreamImage.jsx';
 
-const data = require('../../data.js');
-
 class IcecreamCarousel extends React.Component {
   constructor(props) {
     super(props);
@@ -16,25 +14,27 @@ class IcecreamCarousel extends React.Component {
   }
   componentDidMount() {
     let maxFlavorIndex = -1;
-    data.flavors.forEach(flavor => { maxFlavorIndex++; });
-    let flavor = data.flavors[0];
-    // return colors returnColorTheme
+    if (this.props.flavor) {
+      this.props.flavor.forEach(flavor => {
+        maxFlavorIndex++;
+      });
+    }
+    let flavor = this.props.flavor[0];
     this.props.returnFlavor(flavor);
     this.setState({ flavor, maxFlavorIndex });
   }
   handleClick(isDirectionRight) {
     if (isDirectionRight) {
-      // TODO - catch out of bounds index
       if (this.state.flavorIndex + 1 > this.state.maxFlavorIndex) return;
       this.setState({
         flavorIndex: this.state.flavorIndex + 1,
-        flavor: data.flavors[this.state.flavorIndex + 1]
+        flavor: this.props.flavor[this.state.flavorIndex + 1]
       }, () => this.props.returnFlavor(this.state.flavor));
     } else {
       if (this.state.flavorIndex - 1 < 0) return;
       this.setState({
         flavorIndex: this.state.flavorIndex - 1,
-        flavor: data.flavors[this.state.flavorIndex - 1]
+        flavor: this.props.flavor[this.state.flavorIndex - 1]
       }, () => this.props.returnFlavor(this.state.flavor));
     }
   }
@@ -51,6 +51,7 @@ class IcecreamCarousel extends React.Component {
           <div className="IcecreamCarousel">
             <IcecreamInfo
               flavor={this.state.flavor}
+              toggleLearnMoreModal={this.props.toggleLearnMoreModal}
             />
           </div>
           <div onClick={() => console.log(this.state)}>

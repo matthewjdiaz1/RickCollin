@@ -11,13 +11,16 @@
   font-style: normal; */
 }
 html,body,#app{
-  height:100%;
-  margin:0;
-  padding:0
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
 .app-container {
+  position: fixed; 
   font-family: 'GT-American-Bold', 'serif';
   height: calc(100% - 10px);
+  width: calc(100% - 10px);
 }
 /* header */
 .header-container {
@@ -64,6 +67,9 @@ html,body,#app{
   width: 115px;
   height: 75px;
   line-height: 75px;
+  border-radius: 25px;
+  /* border: 3px solid; */
+  color: white;
   font-weight: bolder;
   text-align: center;
   text-transform: uppercase;
@@ -71,14 +77,13 @@ html,body,#app{
 }
 .header-button:hover {
   cursor: pointer;
-  /* background-color: rgb(241,135,149); */
+  background-color: rgb(241,135,149);
 }
 .header-shopnow-button {
   width: 125px;
   height: 30px;
   line-height: 30px;
   border-radius: 25px;
-  border: 3px solid white;
   margin: 20px 0px 20px 0px;
   font-size: 20px;
   font-weight: bolder;
@@ -111,6 +116,9 @@ html,body,#app{
   z-index: 2;
   fill: white;
 }
+.icecream-left-arrow:hover {
+  cursor: pointer;
+}
 .icecream-right-arrow {
   position: absolute;
   top: 45%;
@@ -120,6 +128,9 @@ html,body,#app{
   width: 60px;
   z-index: 2;
   fill: white;
+}
+.icecream-right-arrow:hover {
+  cursor: pointer;
 }
 .icecream-info-container {
   display: flex;
@@ -205,4 +216,13 @@ html,body,#app{
 .icecream-image-image {
   width: 550px;
   padding: 75px 25px 0px 25px;
+}
+
+/* modal */
+
+.modal-container {
+  position: fixed; 
+  font-family: 'GT-American-Bold', 'serif';
+  height: calc(100% - 10px);
+  width: calc(100% - 10px);
 }
