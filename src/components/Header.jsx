@@ -5,8 +5,6 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    // USE REACT HEADROOM - MADE BY KYLE
-    // ALSO, USE GATSBY, static site generator
   }
   componentWillMount() {
     // this.setState({
@@ -25,11 +23,11 @@ class Header extends React.Component {
           <HeaderButton text={'Recipes'} hoverColor={this.props.secondaryColor} />
         </div>
         <div className="header-container-right">
-          <div className="header-shopnow-button">Shop Now</div>
+          <div style={{ color: this.props.secondaryColor }} className="header-shopnow-button">Shop Now</div>
         </div>
       </div>
     )
   }
-}
+};
 
 export default Header;

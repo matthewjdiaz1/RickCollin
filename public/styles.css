@@ -90,7 +90,7 @@ html,body,#app{
   text-align: center;
   text-transform: uppercase;
   background-color: white;
-  color: rgb(241,168,182);
+  /* color: rgb(241,168,182); */
   z-index: 2;
 }
 .header-shopnow-button:hover {
