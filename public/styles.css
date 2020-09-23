@@ -130,6 +130,7 @@ html,body,#app{
 .icecream-right-arrow:hover {
   cursor: pointer;
 }
+
 .icecream-info-container {
   display: flex;
   flex-direction: column;
@@ -141,10 +142,12 @@ html,body,#app{
 }
 .icecream-name {
   display: flex;
+  /* flex-direction: column-reverse; */
   font-size: 120px;
   font-weight: bolder;
   line-height: .9em;
-  height: 1em;
+  height: 1.5em;
+  /* padding-top: 100px; */
   width: 500px;
   text-transform: uppercase;
   padding: 0px 50px 0px 0px;
@@ -169,16 +172,16 @@ html,body,#app{
   padding: 0px 50px 0px 0px;
 }
 .icecream-learn-more {
-  width: 170px;
-  height: 40px;
-  /* line-height: 30px; */
+  width: 130px;
+  height: 33px;
+  line-height: 30px;
   border-radius: 25px;
   border: 3px solid white;
   margin: 20px 0px 20px 0px;
   font-size: 20px;
   font-weight: bolder;
-  text-align: top;
-  align-items: center;
+  text-align: center;
+  /* align-items: center; */
   text-transform: uppercase;
   color: white;
 }
