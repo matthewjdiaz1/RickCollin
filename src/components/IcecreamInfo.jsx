@@ -8,7 +8,7 @@ class IceacreamInfo extends React.Component {
         <div className="icecream-name">
           {this.props.flavor.name}
         </div>
-        <div className="icecream-dash">____</div>
+        <div className="icecream-dash"></div>
         <div className="icecream-info">
           {this.props.flavor.info}
         </div>
